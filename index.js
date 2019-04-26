@@ -49,5 +49,19 @@ server.put('/characters/:id', (req, res) => {
   });
 });
 
+server.delete('/characters/:id', (req, res) => {
+ const id = req.params;
+
+ db(characters)
+  .where({ id })
+  .del()
+  .then(count => {
+   // count === number of records deleted
+   res.status(200).json(count);
+  })
+  .catch(err => {
+   res.status(500).json(err);
+  });
+});
 
 server.listen(8000, () => console.log('Running on port 8000'));
