@@ -1,0 +1,20 @@
+{
+ "name": "rolex",
+ "version": "1.0.0",
+ "description": "",
+ "main": "index.js",
+ "scripts": {
+  "server": "nodemon"
+ },
+ "keywords": [],
+ "author": "",
+ "license": "ISC",
+ "devDependencies": {
+  "nodemon": "^1.18.11"
+ },
+ "dependencies": {
+  "helmet": "^3.16.0",
+  "knex": "^0.16.5",
+  "sqlite3": "^4.0.6"
+ }
+}
